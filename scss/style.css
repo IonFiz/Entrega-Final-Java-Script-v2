@@ -1,0 +1,289 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Montserrat',sans-serif;
+}
+
+/* MAIN */
+.containerindex {
+  width: 100%;
+  height: 100%;
+}
+
+.containerindex video {
+  padding: 5px;
+  margin-top: 2px;
+}
+
+.containerindex h1, .containerindex h2, .containerindex h3, .containerindex h4, .containerindex h5 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+  color: darkred;
+}
+
+.containerindex h2 {
+  color: white;
+}
+
+.containerindex h3 {
+  color: white;
+}
+
+.containerindex h4 {
+  color: white;
+}
+
+.containerindex h5 {
+  color: white;
+}
+
+.navbar-collapse {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  color: white;
+}
+
+.containernosotros {
+  width: 100%;
+  height: 100%;
+}
+
+.containernosotros h1, .containernosotros .containerindex h2, .containerindex .containernosotros h2, .containernosotros .containerindex h3, .containerindex .containernosotros h3, .containernosotros .containerindex h4, .containerindex .containernosotros h4, .containernosotros .containerindex h5, .containerindex .containernosotros h5 {
+  padding: 1rem;
+}
+
+.containernosotros p {
+  text-align: center;
+}
+
+.containernosotros h2 {
+  text-align: center;
+}
+
+.w3-container {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.w3-container h5 {
+  color: darkred;
+}
+
+.containerequipos {
+  position: relative;
+  width: 50%;
+}
+
+.containerequipos:hover .overlay {
+  opacity: 1;
+}
+
+.containerequipos .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.containerequipos .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #000000;
+}
+
+.containerequipos .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.botonequipos button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.botonequipos button:hover {
+  background-color: darkred;
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.botonequipos button:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.mainrequisitos {
+  color: white;
+  padding: 10px;
+  background-image: url(../images/banner-3.jpg);
+}
+
+.mainrequisitos h2 {
+  color: white;
+  padding: 2px;
+  text-align: center;
+}
+
+.mainrequisitos hr {
+  color: white;
+}
+
+.mainrequisitos ul li {
+  color: white;
+  padding: 2px;
+}
+
+.botoncontacto button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  float: right;
+  margin: 10px;
+}
+
+.botoncontacto span {
+  display: block;
+  margin-left: 0.3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.botoncontacto button svg {
+  display: block;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.botoncontacto button:hover .svg-wrapper {
+  -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+          animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.botoncontacto button:hover svg {
+  -webkit-transform: translateX(1.2em) rotate(45deg) scale(1.1);
+          transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.botoncontacto button:hover span {
+  -webkit-transform: translateX(5em);
+          transform: translateX(5em);
+}
+
+.botoncontacto button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+@-webkit-keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+            transform: translateY(0.1em);
+  }
+  to {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+            transform: translateY(0.1em);
+  }
+  to {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
+
+.footer {
+  margin: 30px;
+}
+
+.footer .row a {
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  margin-right: 10px;
+  text-align: center;
+  -webkit-transition: all 30mms ease;
+  transition: all 30mms ease;
+}
+
+.footer img {
+  max-width: 170px;
+}
+
+.footer h5 {
+  text-align: center;
+  margin: 20px;
+  font-size: small;
+}
+
+.footer .row a:hover {
+  color: darkred;
+}
+/*# sourceMappingURL=style.css.map */

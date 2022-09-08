@@ -1,0 +1,19 @@
+{
+  "name": "NexusBro-AdolfoNin-sass-seo-master",
+  "version": "1.0.0",
+  "description": "Nexus Bro Emprendimiento de alquiler de sonido e iluminacion profesional para eventos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+  },
+  
+  "author": "adolfonin",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
