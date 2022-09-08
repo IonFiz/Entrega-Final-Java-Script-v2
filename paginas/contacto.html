@@ -77,51 +77,28 @@
 
         
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <form class="col-12 col-md-6 col-lg-7 form d-grid gap-3 mb-3 mb-md-0 formContacto">
 
-                
-                <div class="row">
+            <div class="form-group">
+                <label for="nombre--contacto">NOMBRE</label>
+                <input required type="text" id="nombre--contacto" name="nombre--contacto" class="form-control">
+            </div>
 
-                    
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <label for="name" class="">Tu nombre!</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                            
-                        </div>
-                    </div>
-                   
-                </div>
-               <div class="row">
-                     <div class="col-md-12">
-                     <div class="md-form mb-0">
-                     <label for="email" class="">Dejanos tu  email!</label>
-                     <input type="text" id="email" name="email" class="form-control">
-            
-                </div>
-                     </div>
-                </div>
-                
-               
-              
-               
-                <div class="row">
+            <div class="form-group">
+                <label for="email--contacto">EMAIL</label>
+                <input required type="email" id="email--contacto" name="email--contacto" class="form-control">
+            </div>
 
-                  
-                    <div class="col-md-12">
+            <div class="form-group">
+                <label for="telefono--contacto">TELÉFONO (Opcional)</label>
+                <input type="tel" id="telefono--contacto" name="telefono--contacto" class="form-control">
+            </div>
 
-                        <div class="md-form">
-                            <label for="message">Tu mensaje!</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                           
-                        </div>
+            <div class="form-group">
+                <label for="mensaje--contacto">MENSAJE (Opcional)</label>
+                <textarea id="mensaje--contacto"  class="form-control" name="mensaje--contacto" ></textarea>  
+            </div>
 
-                    </div>
-                </div>
-                
-
-            </form>
-            
             <div class="botoncontacto">
               <button>
                 <div class="svg-wrapper-1">
@@ -135,6 +112,12 @@
                 <span>Enviar!</span>
               </button>
             </div>
+
+            
+
+        </form>
+            
+            
             
         </div>
        
