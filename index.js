@@ -211,3 +211,69 @@ audioIcon.addEventListener("click", () => {
     toggleMute();
     changeAudioIcon();
 });
+
+/**************************************************************/
+/*                        CONTACTO                            */
+/**************************************************************/
+function sendMailContacto (form) {  // Manda el mail al dueño de la página con la información de la persona
+    let nombre = form.querySelector("#nombre--contacto").value.toUpperCase();
+    let boton = form.querySelector(".boton--contacto");
+    
+    boton.innerText = 'Enviando...';
+
+    const Toast = Swal.mixin({
+        toast: true,
+        showConfirmButton: false,   
+        timer: 5000,
+        position: "top-end",
+        color: "#645899"
+    });
+    
+    emailjs.init('9oAkw-6MONbCSxNDH');
+    const serviceID = "service_hopw67s";
+    const templateID = "template_wyd82p8";
+
+    emailjs.send(serviceID, templateID, {
+        name: form.querySelector("#nombre--contacto").value,
+        email: form.querySelector("#email--contacto").value,
+        phone: form.querySelector("#telefono--contacto").value,
+        message: form.querySelector("#mensaje--contacto").value,
+    })
+    .then(() => {
+        Toast.fire({
+            icon: 'success',
+            title: `${nombre}! Vamos a estar comunicandonos con vos lo antes posible!`,
+        })
+        boton.innerText  = 'Enviar';
+    }).catch(error => {
+        Toast.fire({
+            icon: 'error',
+            title: "Hubo un error. Espera un rato e intenta nuevamente."
+        });
+        console.log(error);
+        boton.innerText  = 'Enviar';
+    });
+}
+
+if (thisURL.includes("contacto.html")){
+    let formContacto = document.querySelector(".main--contacto .formContacto");
+    formContacto.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let email = e.target.querySelector("#email--contacto").value;
+        
+        if (validarEmail(email)){
+            sendMailContacto(e.target);
+        } else {
+            const Toast = Swal.mixin({
+                toast: true,
+                showConfirmButton: false,   
+                timer: 5000,
+                position: "top-end",
+                color: "#645899"
+            }).fire({
+                icon: 'error',
+                title: 'Vamos a necesitar un email válido para poder comunicarnos con vos!'
+            });
+        }
+    })
+}
