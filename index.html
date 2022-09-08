@@ -41,6 +41,25 @@
 
                     <a href="index.html" class="navbar-brand fs-2">NEXUS BRO</a>
 
+                    <!-- Opciones de usuario -->
+                <div class="dropup d-md-none">
+                  <button class="navbar-toggler header__nav__item dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-regular fa-user"></i>
+                  </button>
+                  <div class="dropdown-menu text-center mb-3 header__cuenta bg-dark">
+                      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#registerModal">CREAR CUENTA</button>
+                      <button type="button" class="btn btn-light d-none botonCuenta">CUENTA</button>
+
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal">INICIAR SESIÓN</button>
+                      <button type="button" class="btn btn-dark d-none botonSalir">SALIR</button>
+                  </div>
+              </div>
+
+               <!-- Carrito -->
+               <button class="navbar-toggler header__nav__item" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
 
                         <span class="navbar-toggler-icon"></span>
